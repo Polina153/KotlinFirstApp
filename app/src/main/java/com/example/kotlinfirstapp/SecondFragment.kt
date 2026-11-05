@@ -1,5 +1,6 @@
 package com.example.kotlinfirstapp
 
+import android.graphics.Typeface
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -35,6 +36,12 @@ class SecondFragment : Fragment() {
         tvPainting = view.findViewById(R.id.tvPainting)
         tvDescription = view.findViewById(R.id.tvDescription)
         btnNext = view.findViewById(R.id.btnNext)
+
+        // Загрузка шрифта из assets
+        val tf = Typeface.createFromAsset(requireActivity().assets, "1968odyssey3Dital.ttf")
+        tvArtist.typeface = tf
+        tvPainting.typeface = tf
+        tvDescription.typeface = tf
 
         showArtwork(currentId)
 
