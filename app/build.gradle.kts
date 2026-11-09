@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -49,4 +50,8 @@ dependencies {
 
     val lottieVersion = "6.4.0"
     implementation ("com.airbnb.android:lottie:$lottieVersion")
+
+    ksp("androidx.room:room-compiler:2.8.3")
+        //implementation("androidx.room:room-ktx:2.8.3")
+    implementation("androidx.room:room-runtime:2.8.3")
 }
